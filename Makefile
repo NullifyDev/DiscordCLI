@@ -8,7 +8,7 @@ run: build
 	chmod +x ./bin/discordcli && ./bin/discordcli
 
 build: $(OBJ)
-	clearl 
+	clear
 	ld -o ./bin/discordcli $(OBJ)
 bin/%.o: src/%.c
 	clear
