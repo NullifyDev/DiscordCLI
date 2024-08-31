@@ -1,8 +1,8 @@
-#ifndef COMMON
-#define COMMON
+#ifndef WINDOW_COMMON
+#define WINDOW_COMMON
 
-#include "resize.h"
+#include "window.h"
 #include "update.h"
-
+#include "resize.h"
 
 #endif

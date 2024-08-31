@@ -6,7 +6,9 @@
 #include <unistd.h>
 #include <stdbool.h>
 
+#include "size.h"
 #include "window.h"
-inline static bool window_hasResized(struct dcli_window *dw);
+
+bool window_hasResized(struct dcli_window *dw);
 
 #endif

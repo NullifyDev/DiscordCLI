@@ -5,8 +5,8 @@
 #include <stdio.h>
 #include <unistd.h>
 
-#include "size.h"
+#include "window.h"
 
-inline static void window_updateSize(struct dcli_window *dw);
+void window_updateSize(struct dcli_window *dw);
 
 #endif
