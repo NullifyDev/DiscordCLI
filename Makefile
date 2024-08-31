@@ -1,12 +1,20 @@
+CFLAGS = -g
+CSOURCE = $(shell find src -name '*.c')
+
+OBJ = $(patsubst src/%.c, bin/%.o, $(CSOURCE))
+
 run: build
 	clear
-	./bin/main.o
+	chmod +x ./bin/discordcli && ./bin/discordcli
 
-build:
+build: $(OBJ)
+	clearl 
+	ld -o ./bin/discordcli $(OBJ)
+bin/%.o: src/%.c
 	clear
-	gcc src/main.c -o bin/main.o && chmod +x bin/main.o
+	gcc $(CFLAGS) -o $@ $<
 
-clean: 
+clean:
 	rm -rf ./bin/*
 
 rebuild: clean
