@@ -6,10 +6,10 @@
       "type": "cppdbg",
       "request": "launch",
       "args": [],
-      "stopAtEntry": false,
-      "externalConsole": false,
+      "stopAtEntry": true,
+      "externalConsole": true,
       "cwd": "/home/saturn/DiscordCLI",
-      "program": "/home/saturn/DiscordCLI/build/Debug/outDebug",
+      "program": "/home/saturn/DiscordCLI/bin/discordcli",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

@@ -1,14 +1,16 @@
 #include "main.h"
-#include "window/update.h"
-#include "window/resize.h"
+
+#include <stdio.h>
 
 int main()
 {
+    printf("Hello! :D");
     struct dcli_window *dw = malloc(sizeof(struct dcli_window));
 
     CLEAR();
     GOTO_XY(1, 1);
 
+    printf("%d:%d", dw->currsize.x, dw->prevsize.y);
     while (1) {
         window_updateSize(dw);
         if (window_hasResized(dw)) {
@@ -16,7 +18,6 @@ int main()
             printf("%d:%d", dw->currsize.x, dw->currsize.y);
         }
     }
-    printf("%d:%d", dw->currsize.x, dw->prevsize.y);
     // printf("%d:%d\n", w->currsize.x, w->currsize.y);
 
     //              window  x   y    w   h   r   g    b
